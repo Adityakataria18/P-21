@@ -5,7 +5,7 @@ var music;
 
 function preload(){
     // load sound here  
-    music=loadSound(music.mp3)
+    music=loadSound("music.mp3")
 }
 
 
@@ -21,15 +21,15 @@ function setup(){
     //create two more blocks i.e. block3 and block4 here
     
     block3 = createSprite(505,580,200,30);
-    block1.shapeColor = "red";
+    block3.shapeColor = "red";
 
-    block2 = createSprite(800,580,360,30);
-    block2.shapeColor = "green";
+    block4 = createSprite(800,580,360,30);
+    block4.shapeColor = "green";
 
     ball = createSprite(random(20,750),100, 40,40);
     ball.shapeColor = rgb(255,255,255);
-    ball.x=mouse.x
-    ball.y=mouse.y
+    ball.x=mouseX
+    ball.y=mouseY
     //write code to add velocityX and velocityY
     
 }
@@ -69,7 +69,7 @@ function draw() {
     //write code to bounce off ball from the block4
     if(block4.isTouching(ball)){
         ball.shapeColor = "orange";
-        //write code to set velocityX and velocityY of ball as 0
+        
         ball.velocityX=0
         ball.velocityY=0
         //write code to stop music
